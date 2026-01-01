@@ -7,7 +7,7 @@
 	</div>
 	<div class="contact-content">
 		<div class="code-block">
-			<pre><span class="keyword">const</span> project = {'{'}<br/>  client: <span class="string">"you"</span>,<br/>  approach: <span class="string">"0-to-1"</span>,<br/>  quality: <span class="string">"production-ready"</span>,<br/>  contact: <span class="string">"<a href="mailto:contact@codepasture.com">contact@codepasture.com</a>"</span><br/>{'}'};</pre>
+			<pre><span class="keyword">const</span> project = {'{'}<br/>  client: <span class="string">"you"</span>,<br/>  approach: <span class="string">"0-to-1"</span>,<br/>  quality: <span class="string">"production-ready"</span>,<br/>  email: <span class="string">"<a href="mailto:contact@codepasture.com">contact@codepasture.com</a>"</span>,<br/>  phone: <span class="string">"<a href="tel:+15176181703">(517) 618-1703</a>"</span><br/>{'}'};</pre>
 		</div>
 		<p>Have something to build? Let's talk.</p>
 		<a href="mailto:contact@codepasture.com" class="btn-primary">Send Email</a>
