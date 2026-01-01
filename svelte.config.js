@@ -10,15 +10,6 @@ const config = {
 			precompress: false,
 			strict: true
 		}),
-		prerender: {
-			handleHttpError: ({ path, message }) => {
-				// Ignore missing favicon during prerender - we'll add it later
-				if (path === '/favicon.ico') {
-					return;
-				}
-				throw new Error(message);
-			}
-		}
 	}
 };
 
