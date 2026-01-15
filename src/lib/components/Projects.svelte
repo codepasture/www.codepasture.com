@@ -4,25 +4,25 @@
 			name: 'DevHours',
 			description: 'Development time tracking by project',
 			tech: 'react-native',
-			platforms: 'iOS',
 			color: 'purple',
-			link: 'https://apps.apple.com/us/app/devhours/id6756197386'
+			appStore: 'https://apps.apple.com/us/app/devhours/id6756197386',
+			playStore: null
 		},
 		{
 			name: 'HayTracker',
 			description: 'Inventory management for hay and straw bales',
 			tech: 'flutter',
-			platforms: 'Coming Soon',
 			color: 'green',
-			link: null
+			appStore: 'https://apps.apple.com/us/app/haytracker/id6757104455',
+			playStore: null
 		},
 		{
 			name: 'Propane Tracker',
 			description: 'Tank monitoring and delivery tracking',
 			tech: 'flutter',
-			platforms: 'Coming Soon',
 			color: 'orange',
-			link: null
+			appStore: 'https://apps.apple.com/us/app/propanetracker/id6757357644',
+			playStore: 'https://play.google.com/store/apps/details?id=com.codepasture.propane_tracker&hl=en_US'
 		}
 	];
 
@@ -58,16 +58,27 @@
 			<div class="app-row">
 				<div class="app-name">
 					<span class="app-indicator {app.color}"></span>
-					{#if app.link}
-						<a href={app.link} target="_blank" rel="noopener">{app.name}</a>
-					{:else}
-						{app.name}
-					{/if}
+					{app.name}
 				</div>
 				<div class="app-desc">{app.description}</div>
 				<div class="app-meta">
 					<code>{app.tech}</code>
-					<span class="platforms">{app.platforms}</span>
+					{#if app.appStore || app.playStore}
+						<div class="store-badges">
+							{#if app.appStore}
+								<a href={app.appStore} target="_blank" rel="noopener" class="store-badge">
+									<img src="/app-store-badge.svg" alt="Download on the App Store" />
+								</a>
+							{/if}
+							{#if app.playStore}
+								<a href={app.playStore} target="_blank" rel="noopener" class="store-badge">
+									<img src="/google-play-badge.png" alt="Get it on Google Play" />
+								</a>
+							{/if}
+						</div>
+					{:else}
+						<span class="platforms">Coming Soon</span>
+					{/if}
 				</div>
 			</div>
 		{/each}
@@ -202,6 +213,27 @@
 	.platforms {
 		color: var(--color-text-muted);
 		font-size: 0.8rem;
+	}
+
+	.store-badges {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+	}
+
+	.store-badge img {
+		height: 28px;
+		opacity: 0.9;
+		transition: opacity var(--transition-fast);
+	}
+
+	.store-badge img[src*="google-play"] {
+		height: 42px;
+		margin: -7px 0;
+	}
+
+	.store-badge:hover img {
+		opacity: 1;
 	}
 
 	.open-source h3 {
