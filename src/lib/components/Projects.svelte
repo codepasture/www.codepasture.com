@@ -5,6 +5,8 @@
 			description: 'Development time tracking by project',
 			tech: 'react-native',
 			color: 'purple',
+			url: '/devhours',
+			icon: '/devhours-icon.png',
 			appStore: 'https://apps.apple.com/us/app/devhours/id6756197386',
 			playStore: null
 		},
@@ -13,14 +15,18 @@
 			description: 'Inventory management for hay and straw bales',
 			tech: 'flutter',
 			color: 'green',
+			url: '/haytracker',
+			icon: '/haytracker-icon.png',
 			appStore: 'https://apps.apple.com/us/app/haytracker/id6757104455',
-			playStore: null
+			playStore: 'https://play.google.com/store/apps/details?id=com.codepasture.haytracker'
 		},
 		{
 			name: 'Propane Tracker',
 			description: 'Tank monitoring and delivery tracking',
 			tech: 'flutter',
 			color: 'orange',
+			url: '/propane-tracker',
+			icon: '/propane-tracker-icon.png',
 			appStore: 'https://apps.apple.com/us/app/propanetracker/id6757357644',
 			playStore: 'https://play.google.com/store/apps/details?id=com.codepasture.propane_tracker&hl=en_US'
 		}
@@ -57,8 +63,10 @@
 		{#each apps as app}
 			<div class="app-row">
 				<div class="app-name">
-					<span class="app-indicator {app.color}"></span>
-					{app.name}
+					<a href={app.url} class="app-icon-link">
+						<img src={app.icon} alt="{app.name} icon" class="app-icon" />
+					</a>
+					<a href={app.url}>{app.name}</a>
 				</div>
 				<div class="app-desc">{app.description}</div>
 				<div class="app-meta">
@@ -171,23 +179,20 @@
 		color: var(--color-accent);
 	}
 
-	.app-indicator {
-		width: 10px;
-		height: 10px;
-		border-radius: 50%;
+	.app-icon-link {
 		flex-shrink: 0;
+		line-height: 0;
 	}
 
-	.app-indicator.green {
-		background: var(--color-accent);
+	.app-icon {
+		width: 32px;
+		height: 32px;
+		border-radius: 6px;
+		transition: transform var(--transition-fast);
 	}
 
-	.app-indicator.orange {
-		background: var(--color-orange);
-	}
-
-	.app-indicator.purple {
-		background: var(--color-purple);
+	.app-icon-link:hover .app-icon {
+		transform: scale(1.1);
 	}
 
 	.app-desc {
