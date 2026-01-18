@@ -1,27 +1,45 @@
 <script lang="ts">
-	const services = [
+	const services: {
+		tag: string;
+		title: string;
+		description: string;
+		tech: string[];
+		link?: string;
+	}[] = [
 		{
-			tag: 'frontend',
-			title: 'Frontend & Mobile',
-			description: 'Web apps and native-quality mobile apps for iOS, Android, and web. Built to last.',
-			tech: ['vue', 'react', 'svelte', 'flutter', 'react-native']
+			tag: 'mfe-architecture',
+			title: 'Micro-Frontend Shell',
+			description:
+				'Break free from frontend monoliths. Svelte 5 shells with native ES modules, team autonomy, and independent deployability.',
+			tech: ['svelte-5', 'es-modules', 'k8s'],
+			link: '/mfe-shell/'
+		},
+		{
+			tag: 'mobile',
+			title: 'Mobile Development',
+			description:
+				'Native-quality mobile apps for iOS, Android, and web. From first commit to App Store.',
+			tech: ['flutter', 'react-native', 'expo']
 		},
 		{
 			tag: 'backend',
 			title: 'Microservices',
-			description: '0-to-1 backend development. Domain-driven design with 100% test coverage, every time.',
+			description:
+				'0-to-1 backend development. Domain-driven design with 100% test coverage, every time.',
 			tech: ['.net', 'c#', 'f#', 'go', 'node']
 		},
 		{
 			tag: 'infrastructure',
 			title: 'Cloud & DevOps',
-			description: 'Kubernetes orchestration, Docker containers, CI/CD pipelines. Production-ready from day one.',
+			description:
+				'Kubernetes orchestration, Docker containers, CI/CD pipelines. Production-ready from day one.',
 			tech: ['k8s', 'docker', 'nginx', 'azure-devops', 'github-actions']
 		},
 		{
 			tag: 'ai-assisted',
 			title: 'GenAI Development',
-			description: 'Modern AI-assisted workflows. Pattern-driven architecture that accelerates delivery.',
+			description:
+				'Modern AI-assisted workflows. Pattern-driven architecture that accelerates delivery.',
 			tech: ['claude', 'tdd', 'patterns']
 		}
 	];
@@ -45,6 +63,9 @@
 						<code>{tech}</code>
 					{/each}
 				</div>
+				{#if service.link}
+					<a href={service.link} class="service-link">Learn More &rarr;</a>
+				{/if}
 			</div>
 		{/each}
 	</div>
@@ -139,6 +160,19 @@
 		padding: 0.2rem 0.5rem;
 		border-radius: var(--radius-sm);
 		border: 1px solid var(--color-border);
+	}
+
+	.service-link {
+		display: inline-block;
+		margin-top: 1rem;
+		font-size: 0.85rem;
+		font-weight: 500;
+		color: var(--color-accent);
+		transition: opacity var(--transition-fast);
+	}
+
+	.service-link:hover {
+		opacity: 0.8;
 	}
 
 	@media (max-width: 768px) {
