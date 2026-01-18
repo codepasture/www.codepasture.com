@@ -12,8 +12,8 @@
 		property="og:description"
 		content="Break free from frontend monoliths. Svelte 5 MFE shells with native ES modules, team autonomy, and independent deployability."
 	/>
-	<meta property="og:image" content="https://codepasture.com/mfe-shell-logo.png" />
-	<meta property="og:url" content="https://codepasture.com/mfe-shell/" />
+	<meta property="og:image" content="https://www.codepasture.com/mfe-shell-logo.png" />
+	<meta property="og:url" content="https://www.codepasture.com/mfe-shell/" />
 	<meta property="og:type" content="website" />
 </svelte:head>
 
