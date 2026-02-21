@@ -27,7 +27,7 @@
 
 			<div class="faq-item">
 				<h3>Which mystery set should I pray today?</h3>
-				<p>It depends on which mode you chose during setup. In <strong>Daily Schedule</strong> mode, the app follows the traditional weekly pattern: Joyful (Monday, Saturday), Sorrowful (Tuesday, Friday), Glorious (Wednesday, Sunday), and Luminous (Thursday). In <strong>Continuous Cycle</strong> mode, it moves through the mystery sets in order — each time you finish a Rosary, the next set begins automatically.</p>
+				<p>It depends on which mode you chose during setup. In <strong>Daily Default</strong> mode, each time you open the app the mystery set defaults to the traditional schedule for that day: Joyful (Monday, Saturday), Sorrowful (Tuesday, Friday), Glorious (Wednesday, Sunday), and Luminous (Thursday). After completing a Rosary, the next set follows the continuous cycle — so you can pray multiple sets in one day. In <strong>Continuous Cycle</strong> mode, it simply moves through the mystery sets in order. In both modes, you can switch to any mystery set at any time using the dropdown on the prayer screen.</p>
 			</div>
 
 			<div class="faq-item">

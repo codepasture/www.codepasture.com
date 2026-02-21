@@ -41,8 +41,8 @@
 					<p>Joyful, Sorrowful, Glorious, and Luminous mysteries with full scripture passages for every decade.</p>
 				</div>
 				<div class="feature">
-					<h3>Daily Schedule or Continuous Cycle</h3>
-					<p>Follow the traditional weekly pattern or pray through the mystery sets in order — your choice at setup.</p>
+					<h3>Daily Default or Continuous Cycle</h3>
+					<p>Default to the traditional mystery for each day, or pray through all the sets in order. Switch mystery sets at any time.</p>
 				</div>
 				<div class="feature">
 					<h3>Decade-by-Decade Progress</h3>
